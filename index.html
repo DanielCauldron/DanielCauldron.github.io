@@ -8,134 +8,135 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
 
-    <!-- Dev Icon Fonts -->
+    <!-- Dev Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-    <!-- CSS do projeto -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main id="container">
+<main id="container">
 
-        <!-- LATERAL -->
-        <aside id="bio-container">
-            <h2>Daniel Fernando Generoso Caldeirão</h2>
+    <!-- LATERAL -->
+    <aside id="bio-container">
+        <h2>Daniel Fernando Generoso Caldeirão</h2>
 
-            <!-- IMPORTANTE: deixe a imagem na mesma pasta do HTML -->
-            <img id="bio-image" src="daniel.jpg" alt="Daniel Caldeirão">
+        <!-- IMPORTANTE: coloque a imagem na mesma pasta -->
+        <img id="bio-image" src="daniel.jpg" alt="Daniel Caldeirão">
 
+        <p>
+            Analista de Business Intelligence com foco em Power BI,
+            criação de dashboards estratégicos e análise de indicadores.
+            <span class="highlight">ANALISTA DE BI JÚNIOR</span>
+        </p>
+
+        <p id="welcome-text">Disponível para oportunidade remota</p>
+
+        <ul id="social-container">
+            <li>
+                <a href="https://www.linkedin.com/in/daniel-caldeir%C3%A3o-43b01b244/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+        </ul>
+
+        <div id="email-container">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:dfcaldeirao@gmail.com">dfcaldeirao@gmail.com</a>
+        </div>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section id="about-container">
+
+        <h1>Sobre Mim</h1>
+
+        <p id="title">
+            <span class="highlight">
+                ANALISTA DE BI JÚNIOR <br>
+                Power BI • SQL • DAX • Dashboards Executivos
+            </span>
+        </p>
+
+        <p class="description">
+            Experiência em Power BI (DAX, Power Query e Modelagem de Dados),
+            construção de KPIs, consultas SQL e ETL com Python (Pandas).
+            Foco em transformar dados em informações estratégicas.
+        </p>
+
+        <!-- BOTÃO -->
+        <a href="https://github.com/DanielCauldron?tab=repositories"
+           id="btn-projects"
+           target="_blank">
+            <ion-icon name="share-social-outline"></ion-icon>
+            <span>Ver Projetos no GitHub</span>
+        </a>
+
+        <!-- SKILLS -->
+        <h2 id="skills-section-title">Minhas Skills</h2>
+
+        <div id="skills-container">
+
+            <!-- BI -->
+            <div class="skills-box">
+                <p class="skills-title">Business Intelligence</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" width="50">
+                <p>Power BI • DAX • Power Query • KPIs</p>
+            </div>
+
+            <!-- Dados -->
+            <div class="skills-box">
+                <p class="skills-title">Banco de Dados & Análise</p>
+                <i class="devicon-python-plain colored"></i>
+                <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" width="50">
+                <p>SQL • BigQuery • Modelagem</p>
+            </div>
+
+            <!-- Versionamento -->
+            <div class="skills-box">
+                <p class="skills-title">Versionamento</p>
+                <i class="devicon-git-plain colored"></i>
+                <i class="devicon-github-original-wordmark"></i>
+                <p>Git • GitHub</p>
+            </div>
+
+            <!-- Ferramentas -->
+            <div class="skills-box">
+                <p class="skills-title">Ferramentas</p>
+                <i class="devicon-vscode-plain colored"></i>
+                <p>VS Code • Linux</p>
+            </div>
+
+        </div>
+
+        <!-- PROJETOS -->
+        <h2>Projetos em Destaque</h2>
+
+        <div class="skills-box">
+            <p class="skills-title">📊 Dashboard Comercial</p>
             <p>
-                Analista de Business Intelligence com foco em Power BI,
-                criação de dashboards estratégicos e análise de indicadores
-                para apoio à tomada de decisão.
-                <span class="highlight">ANALISTA DE BI JÚNIOR</span>
+                KPIs de vendas, meta vs realizado, ticket médio e evolução mensal.
+                Construído no Power BI com modelagem estrela.
             </p>
+        </div>
 
-            <p id="welcome-text">Disponível para oportunidade remota</p>
-
-            <ul id="social-container">
-                <li>
-                    <a href="https://www.linkedin.com/in/daniel-caldeir%C3%A3o-43b01b244/" target="_blank">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-
-            <div id="email-container">
-                <ion-icon name="mail-outline"></ion-icon>
-                <a href="mailto:dfcaldeirao@gmail.com">dfcaldeirao@gmail.com</a>
-            </div>
-        </aside>
-
-        <!-- CONTEÚDO PRINCIPAL -->
-        <section id="about-container">
-
-            <h1>Sobre Mim</h1>
-
-            <p id="title">
-                <span class="highlight">
-                    ANALISTA DE BI JÚNIOR <br>
-                    Power BI • SQL • DAX • Dashboards Executivos
-                </span>
+        <div class="skills-box">
+            <p class="skills-title">💰 Dashboard Financeiro</p>
+            <p>
+                Análise de fluxo de caixa, margem e indicadores financeiros
+                para suporte à tomada de decisão.
             </p>
+        </div>
 
-            <p class="description">
-                Profissional com experiência em suporte computacional e forte atuação em
-                Business Intelligence, desenvolvendo dashboards estratégicos e indicadores
-                para melhoria de processos e apoio à tomada de decisão.
-            </p>
+    </section>
+</main>
 
-            <p class="description">
-                Experiência prática em Power BI (Power Query, DAX e Modelagem de Dados),
-                construção de KPIs, consultas SQL para análise de dados e ETL com Python (Pandas).
-                Atuação com organização, transformação e visualização de dados
-                para geração de insights claros e objetivos.
-            </p>
-
-            <!-- BOTÃO PROJETOS -->
-            <a href="https://github.com/DanielCauldron?tab=repositories"
-               id="btn-projects"
-               target="_blank">
-               <ion-icon name="share-social-outline"></ion-icon>
-               <span>Ver Projetos no GitHub</span>
-            </a>
-
-            <!-- SKILLS -->
-            <h2 id="skills-section-title">Minhas Skills</h2>
-            <p class="description">Tecnologias e ferramentas que utilizo:</p>
-
-            <div id="skills-container">
-
-                <div class="skills-box">
-                    <p class="skills-title">Business Intelligence</p>
-                    <p>Power BI • DAX • Power Query • KPIs</p>
-                </div>
-
-                <div class="skills-box">
-                    <p class="skills-title">Banco de Dados</p>
-                    <p>SQL • BigQuery • Modelagem de Dados</p>
-                </div>
-
-                <div class="skills-box">
-                    <p class="skills-title">ETL & Automação</p>
-                    <p>Python • Pandas • Tratamento de Dados</p>
-                </div>
-
-                <div class="skills-box">
-                    <p class="skills-title">Versionamento & Ferramentas</p>
-                    <p>Git • GitHub • Linux • VS Code</p>
-                </div>
-
-            </div>
-
-            <!-- PROJETOS -->
-            <h2>Projetos em Destaque</h2>
-
-            <div class="skills-box">
-                <p class="skills-title">📊 Dashboard Comercial</p>
-                <p>
-                    Análise de vendas com KPIs estratégicos,
-                    meta vs realizado, ticket médio e evolução mensal.
-                </p>
-            </div>
-
-            <div class="skills-box">
-                <p class="skills-title">💰 Dashboard Financeiro</p>
-                <p>
-                    Análise de fluxo de caixa, margem e indicadores
-                    financeiros para suporte executivo.
-                </p>
-            </div>
-
-        </section>
-    </main>
-
-    <!-- Ion Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- Ion Icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
