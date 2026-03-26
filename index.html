@@ -6,97 +6,170 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #ffffff;
-  color: #1f2937;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
-h1 {
-  margin-bottom: 5px;
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.subtitle {
-  color: #6b7280;
-  margin-bottom: 20px;
+.header img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-info h1 {
+  margin: 0;
+}
+
+.header-info p {
+  margin: 5px 0;
+  color: #475569;
 }
 
 .links a {
   margin-right: 15px;
   text-decoration: none;
   color: #2563eb;
+  font-weight: 500;
 }
 
+/* SECTIONS */
 .section {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-.project {
-  border: 1px solid #e5e7eb;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 15px;
+.section h2 {
+  margin-bottom: 15px;
 }
 
-.project a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #2563eb;
+/* CARDS */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #475569;
+}
+
+.card a {
   text-decoration: none;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  background: #e2e8f0;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>Daniel Caldeirão</h1>
-<p class="subtitle">Analista de Dados Júnior | Power BI</p>
+<!-- HEADER COM FOTO -->
+<div class="header">
+  <img src="sua-foto.jpg" alt="Daniel">
 
-<div class="links">
-  <a href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a>
-  <a href="https://github.com/DanielCauldron" target="_blank">GitHub</a>
+  <div class="header-info">
+    <h1>Daniel Caldeirão</h1>
+    <p>Analista de Dados Júnior | Power BI</p>
+
+    <div class="links">
+      <a href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/DanielCauldron" target="_blank">GitHub</a>
+    </div>
+  </div>
 </div>
 
+<!-- SOBRE -->
 <div class="section">
-  <h2>Sobre</h2>
-  <p>
-    Analista de Dados com foco em Power BI, SQL e ETL. Experiência em criação de dashboards e análise de dados para tomada de decisão.
-  </p>
+  <h2>Sobre mim</h2>
+  <div class="card">
+    <p>
+      Analista de Dados com experiência em Power BI, SQL e ETL.
+      Atuo na criação de dashboards e análise de dados para apoiar decisões estratégicas.
+    </p>
+  </div>
 </div>
 
+<!-- PROJETOS -->
 <div class="section">
   <h2>Projetos</h2>
 
-  <div class="project">
-    <strong>Análise de Churn</strong>
-    <p>Tratamento de dados nulos e geração de insights.</p>
-    <a href="https://github.com/DanielCauldron/Data-Quality-Analysis-Understanding-NULL-Values" target="_blank">Ver projeto</a>
+  <div class="card">
+    <h3>📊 Análise de Churn</h3>
+    <p>Tratamento de dados nulos, modelagem e geração de insights.</p>
+    <a href="https://github.com/DanielCauldron/Data-Quality-Analysis-Understanding-NULL-Values" target="_blank">
+      Ver projeto →
+    </a>
   </div>
 
-  <div class="project">
-    <strong>Dashboard de Vendas</strong>
-    <p>KPIs e análise de faturamento.</p>
+  <div class="card">
+    <h3>📈 Dashboard de Vendas</h3>
+    <p>KPIs de faturamento e análise de performance.</p>
+    <a href="#">Adicionar link →</a>
   </div>
 
-  <div class="project">
-    <strong>ETL com Python</strong>
+  <div class="card">
+    <h3>⚙️ ETL com Python</h3>
     <p>Pipeline de dados com Python e SQL.</p>
+    <a href="#">Adicionar link →</a>
   </div>
 
 </div>
 
+<!-- HABILIDADES -->
 <div class="section">
   <h2>Habilidades</h2>
-  <p>Power BI | SQL | Python | ETL | DAX</p>
+  <div class="skills">
+    <span>Power BI</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>DAX</span>
+    <span>ETL</span>
+    <span>Modelagem de Dados</span>
+  </div>
 </div>
 
 </div>
