@@ -1,116 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfólio Daniel Caldeirão</title>
-
-<!--Google fonts-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,100;1,700;1,900&display=swap" rel="stylesheet">
-
-<!--Dev Icon Fonts-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-<!--CSS do projeto-->     
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Daniel Caldeirão | Analista de Dados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    header {
+      background: #020617;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 { margin: 0; }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+  </style>
 </head>
 
 <body>
-<main id="container">
 
-    <aside id="bio-container">
-        <h2>Daniel Fernando Generoso Caldeirão</h2>
-        <img id="bio-image" src="/img/Daniel Image.jpeg" alt="Daniel Caldeirão">
+<header>
+  <h1>Daniel Caldeirão</h1>
+  <p>Analista de Dados Júnior | Power BI</p>
+  <p>
+    <a href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/DanielCauldron" target="_blank">GitHub</a>
+  </p>
+</header>
 
-        <p>
-            Analista de Business Intelligence com foco em Power BI, criação de dashboards estratégicos e análise de indicadores para apoio à tomada de decisão.
-            
-            <span class="highlight">ANALISTA DE BI JÚNIOR</span>.
-            Power BI • SQL • DAX • Dashboards Executivos.
-        </p>
+<section>
+  <h2>Sobre mim</h2>
+  <p>
+    Analista de Dados com foco em Power BI, SQL e ETL.
+    Tenho experiência prática na criação de dashboards e análise de dados para apoiar decisões.
+  </p>
+</section>
 
-        <p id="welcome-text">Disponível para oportunidades remotas</p>
+<section>
+  <h2>Projetos</h2>
 
-        <!--Icone linkdin e email-->
-        <ul id="social-container">
-            <li>
-                <a href="https://www.linkedin.com/in/daniel-caldeir%C3%A3o-43b01b244/" target="_blank">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-            </li>
-        </ul>
+  <div class="card">
+    <h3>📊 Análise de Churn</h3>
+    <p>Projeto focado em análise de cancelamento de clientes, tratamento de dados nulos e geração de insights.</p>
+    <a href="https://github.com/DanielCauldron/Data-Quality-Analysis-Understanding-NULL-Values" target="_blank">Ver projeto</a>
+  </div>
 
-        <div id="email-container">
-            <ion-icon name="mail-outline"></ion-icon>
-            <a href="mailto:dfcaldeirao@gmail.com">dfcaldeirao@gmail.com</a>
-        </div>
-    </aside>
+  <div class="card">
+    <h3>📈 Dashboard de Vendas</h3>
+    <p>Dashboard com KPIs de faturamento, análise de desempenho e indicadores estratégicos.</p>
+    <a href="#">Adicionar link</a>
+  </div>
 
-    <!--Texto principal-->
-    <section id="about-container">
+  <div class="card">
+    <h3>📦 Projeto ETL com Python</h3>
+    <p>Pipeline de dados utilizando Python e SQL para tratamento e organização de dados.</p>
+    <a href="#">Adicionar link</a>
+  </div>
 
-        <h1 id="name">Daniel Fernando Generoso Caldeirão</h1>
-        <p id="title">
-            <span class="highlight">ANALISTA DE BI JÚNIOR</span>
-        </p>
+</section>
 
-        <p class="description">
-           Profissional com experiência em suporte computacional e forte atuação em Business Intelligence, desenvolvendo dashboards estratégicos e indicadores para melhoria de processos e apoio à tomada de decisão.
-        </p>
+<section>
+  <h2>Habilidades</h2>
+  <p>Power BI | SQL | Python | ETL | DAX | Modelagem de Dados | Git</p>
+</section>
 
-        <p class="description">
-           Experiência prática em Power BI (Power Query, DAX e Modelagem de Dados), construção de KPIs, consultas SQL para análise de dados e ETL com Python (Pandas). Atuação com organização, transformação e visualização de dados para geração de insights claros e objetivos.
-        </p>
-
-        <!--Button ver projetos-->        
-        <a href="https://github.com/DanielCauldron?tab=repositories" id="btn-projects" target="_blank">
-            <ion-icon name="share-social-outline"></ion-icon>
-            <span>Ver Projetos</span>
-        </a>
-
-        <!--skills-->      
-        <h2 id="skills-section-title">Minhas Skills</h2>
-        <p class="description">Tecnologias e ferramentas que utilizo:</p>
-
-        <div id="skills-container">
-
-            <div class="skills-box">
-                <p class="skills-title">Business Intelligence</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" width="50" title="Power BI"/>
-                <p>Power BI • Power BI • DAX • Power Query • KPIs</p>
-            </div>
-
-            <div class="skills-box">
-                <p class="skills-title">Banco de Dados & Análise</p>
-                <i class="devicon-python-plain colored"></i>
-                <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" width="50" title="SQL / Banco de Dados"/>
-                <p>Python • SQL • BigQuery • Modelagem de Dados</p>
-            </div>
-
-            <div class="skills-box">
-                <p class="skills-title">Versionamento</p>
-                <i class="devicon-git-plain colored"></i>
-                <i class="devicon-github-original-wordmark"></i>
-                <p>Git • GitHub</p>
-            </div>
-
-            <div class="skills-box">
-                <p class="skills-title">Ferramentas & Infraestrutura</p>
-                <i class="devicon-vscode-plain colored"></i>
-                <p>VS Code</p>
-            </div>
-
-        </div>  
-
-    </section>
-
-</main>
-
-<!--Ion Icons-->         
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<footer>
+  <p>© 2026 Daniel Caldeirão</p>
+</footer>
 
 </body>
 </html>
