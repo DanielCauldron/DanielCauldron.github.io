@@ -6,163 +6,144 @@
 
 <style>
 body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1120;
-  color: #e5e7eb;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
 header {
-  padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+  margin-bottom: 40px;
 }
 
-header h1 {
-  font-size: 42px;
+h1 {
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-header p {
+.subtitle {
   font-size: 18px;
-  margin-bottom: 20px;
+  color: #475569;
 }
 
-.btn {
-  background: #0ea5e9;
-  padding: 10px 20px;
-  border-radius: 8px;
-  color: white;
+.links a {
+  margin: 0 10px;
   text-decoration: none;
-  margin: 5px;
-  display: inline-block;
+  color: #2563eb;
+  font-weight: bold;
 }
 
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 50px 20px;
+.section {
+  margin-top: 50px;
 }
 
-h2 {
-  margin-bottom: 20px;
-  border-left: 4px solid #0ea5e9;
-  padding-left: 10px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.card {
-  background: #1e293b;
+.project {
+  border: 1px solid #e2e8f0;
   padding: 20px;
-  border-radius: 12px;
-  transition: 0.3s;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: white;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
+.project h3 {
   margin-top: 0;
 }
 
-.card a {
+.project p {
+  color: #475569;
+}
+
+.project a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skills span {
   display: inline-block;
-  margin-top: 10px;
-  color: #38bdf8;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill {
-  background: #1e293b;
-  padding: 8px 12px;
+  margin: 5px;
+  padding: 6px 10px;
+  background: #e2e8f0;
   border-radius: 6px;
 }
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-}
-
-@media (max-width: 700px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
+
 </head>
 
 <body>
 
+<div class="container">
+
 <header>
   <h1>Daniel Caldeirão</h1>
-  <p>Analista de Dados Júnior | Power BI</p>
-  <p>Transformo dados em decisões com dashboards claros e objetivos</p>
+  <p class="subtitle">Analista de Dados Júnior | Power BI</p>
 
-  <a class="btn" href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a>
-  <a class="btn" href="https://github.com/DanielCauldron" target="_blank">GitHub</a>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/DanielCauldron" target="_blank">GitHub</a>
+  </div>
 </header>
 
-<section>
-  <h2>🚀 Sobre mim</h2>
+<div class="section">
+  <h2>Sobre mim</h2>
   <p>
-    Analista de Dados com foco em Power BI, SQL e ETL.
-    Experiência prática na criação de dashboards e análise de dados para apoiar decisões de negócio.
+    Analista de Dados com experiência prática em Power BI, SQL e ETL.
+    Focado na criação de dashboards e análise de dados para geração de insights e apoio à tomada de decisão.
   </p>
-</section>
+</div>
 
-<section>
-  <h2>📊 Projetos</h2>
+<div class="section">
+  <h2>Projetos</h2>
 
-  <div class="grid">
-
-    <div class="card">
-      <h3>📉 Análise de Churn</h3>
-      <p>Tratamento de dados nulos, modelagem e geração de insights sobre cancelamento de clientes.</p>
-      <a href="https://github.com/DanielCauldron/Data-Quality-Analysis-Understanding-NULL-Values" target="_blank">Ver projeto →</a>
-    </div>
-
-    <div class="card">
-      <h3>📈 Dashboard de Vendas</h3>
-      <p>KPIs de faturamento, ticket médio e análise de performance comercial.</p>
-      <a href="#">Adicionar link →</a>
-    </div>
-
-    <div class="card">
-      <h3>⚙️ ETL com Python</h3>
-      <p>Pipeline de dados com Python e SQL para tratamento e organização.</p>
-      <a href="#">Adicionar link →</a>
-    </div>
-
+  <div class="project">
+    <h3>📊 Análise de Churn</h3>
+    <p>
+      Análise de cancelamento de clientes com tratamento de dados nulos,
+      modelagem de dados e geração de insights estratégicos.
+    </p>
+    <a href="https://github.com/DanielCauldron/Data-Quality-Analysis-Understanding-NULL-Values" target="_blank">
+      Ver projeto →
+    </a>
   </div>
-</section>
 
-<section>
-  <h2>🧠 Habilidades</h2>
+  <div class="project">
+    <h3>📈 Dashboard de Vendas</h3>
+    <p>
+      Dashboard com KPIs de faturamento, ticket médio e análise de performance comercial.
+    </p>
+    <a href="#">Adicionar link →</a>
+  </div>
+
+  <div class="project">
+    <h3>⚙️ Pipeline ETL com Python</h3>
+    <p>
+      Processo de extração, transformação e carga de dados utilizando Python e SQL.
+    </p>
+    <a href="#">Adicionar link →</a>
+  </div>
+
+</div>
+
+<div class="section">
+  <h2>Habilidades</h2>
   <div class="skills">
-    <div class="skill">Power BI</div>
-    <div class="skill">SQL</div>
-    <div class="skill">Python</div>
-    <div class="skill">DAX</div>
-    <div class="skill">ETL</div>
-    <div class="skill">Modelagem de Dados</div>
+    <span>Power BI</span>
+    <span>SQL</span>
+    <span>Python</span>
+    <span>DAX</span>
+    <span>ETL</span>
+    <span>Modelagem de Dados</span>
   </div>
-</section>
+</div>
 
-<footer>
-  <p>© 2026 Daniel Caldeirão</p>
-</footer>
+</div>
 
 </body>
 </html>
