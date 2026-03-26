@@ -18,22 +18,22 @@ body {
   padding: 20px;
 }
 
-/* HEADER */
+/* HEADER COM GRADIENTE */
 .header {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: white;
-  padding: 25px;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  color: white;
 }
 
 .header img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  object-fit: cover;
+  border: 3px solid white;
 }
 
 .header-info h1 {
@@ -42,13 +42,13 @@ body {
 
 .header-info p {
   margin: 5px 0;
-  color: #475569;
+  opacity: 0.9;
 }
 
 .links a {
   margin-right: 15px;
   text-decoration: none;
-  color: #2563eb;
+  color: white;
   font-weight: 500;
 }
 
@@ -67,7 +67,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .card h3 {
@@ -87,10 +88,18 @@ body {
 /* SKILLS */
 .skills span {
   display: inline-block;
-  background: #e2e8f0;
+  background: #dbeafe;
+  color: #1e3a8a;
   padding: 6px 12px;
   margin: 5px;
   border-radius: 6px;
+  font-weight: 500;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
 }
 
 /* RESPONSIVO */
@@ -107,13 +116,14 @@ body {
 
 <div class="container">
 
-<!-- HEADER COM FOTO -->
+<!-- HEADER -->
 <div class="header">
   <img src="sua-foto.jpg" alt="Daniel">
 
   <div class="header-info">
     <h1>Daniel Caldeirão</h1>
     <p>Analista de Dados Júnior | Power BI</p>
+    <p>Transformando dados em decisões</p>
 
     <div class="links">
       <a href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a>
@@ -128,7 +138,7 @@ body {
   <div class="card">
     <p>
       Analista de Dados com experiência em Power BI, SQL e ETL.
-      Atuo na criação de dashboards e análise de dados para apoiar decisões estratégicas.
+      Focado na criação de dashboards e análise de dados para geração de insights estratégicos.
     </p>
   </div>
 </div>
@@ -147,7 +157,7 @@ body {
 
   <div class="card">
     <h3>📈 Dashboard de Vendas</h3>
-    <p>KPIs de faturamento e análise de performance.</p>
+    <p>KPIs de faturamento e análise de performance comercial.</p>
     <a href="#">Adicionar link →</a>
   </div>
 
