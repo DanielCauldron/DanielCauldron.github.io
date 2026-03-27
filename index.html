@@ -8,8 +8,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f1f5f9;
-  color: #0f172a;
+  background: #020617;
+  color: #e2e8f0;
 }
 
 .container {
@@ -18,37 +18,38 @@ body {
   padding: 20px;
 }
 
-/* HEADER COM GRADIENTE */
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  background: linear-gradient(135deg, #020617, #1e3a8a);
   padding: 30px;
   border-radius: 12px;
-  color: white;
+  border: 1px solid #1e293b;
 }
 
 .header img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 2px solid #3b82f6;
 }
 
 .header-info h1 {
   margin: 0;
+  color: #f8fafc;
 }
 
 .header-info p {
   margin: 5px 0;
-  opacity: 0.9;
+  color: #94a3b8;
 }
 
 .links a {
   margin-right: 15px;
   text-decoration: none;
-  color: white;
+  color: #3b82f6;
   font-weight: 500;
 }
 
@@ -59,47 +60,48 @@ body {
 
 .section h2 {
   margin-bottom: 15px;
+  color: #3b82f6;
 }
 
 /* CARDS */
 .card {
-  background: white;
+  background: #0f172a;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 15px;
-  border-left: 5px solid #2563eb;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #1e293b;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
 }
 
 .card h3 {
   margin-top: 0;
+  color: #e2e8f0;
 }
 
 .card p {
-  color: #475569;
+  color: #94a3b8;
 }
 
 .card a {
   text-decoration: none;
-  color: #2563eb;
+  color: #3b82f6;
   font-weight: bold;
 }
 
 /* SKILLS */
 .skills span {
   display: inline-block;
-  background: #dbeafe;
-  color: #1e3a8a;
+  background: #1e293b;
+  color: #3b82f6;
   padding: 6px 12px;
   margin: 5px;
   border-radius: 6px;
   font-weight: 500;
-}
-
-/* HOVER */
-.card:hover {
-  transform: translateY(-3px);
-  transition: 0.2s;
 }
 
 /* RESPONSIVO */
@@ -123,7 +125,7 @@ body {
   <div class="header-info">
     <h1>Daniel Caldeirão</h1>
     <p>Analista de Dados Júnior | Power BI</p>
-    <p>Transformando dados em decisões</p>
+    <p>Transformando dados em insights para tomada de decisão</p>
 
     <div class="links">
       <a href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a>
