@@ -1,190 +1,520 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Daniel Caldeirão | Analista de Dados</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Caldeirão • Portfolio Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #020617;
-  color: #e2e8f0;
-}
+    :root {
+      --bg: #050c18;
+      --bg-card: #070f1c;
+      --bg-deep: #0a1929;
+      --border: #0e1e33;
+      --border-blue: #0e2a4a;
+      --blue-strong: #185FA5;
+      --blue-mid: #378ADD;
+      --blue-light: #85B7EB;
+      --blue-pale: #B5D4F4;
+      --text-primary: #e2eaf4;
+      --text-muted: #4d7aa8;
+      --text-dim: #1a3d5c;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
+    html { scroll-behavior: smooth; }
 
-/* HEADER */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: linear-gradient(135deg, #020617, #1e3a8a);
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid #1e293b;
-}
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      min-height: 100vh;
+    }
 
-.header img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 2px solid #3b82f6;
-}
+    /* HEADER */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      background: rgba(5, 12, 24, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
 
-.header-info h1 {
-  margin: 0;
-  color: #f8fafc;
-}
+    .header-name-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
 
-.header-info p {
-  margin: 5px 0;
-  color: #94a3b8;
-}
+    .nav-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue-mid);
+      display: inline-block;
+    }
 
-.links a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: #3b82f6;
-  font-weight: 500;
-}
+    .header-slug {
+      font-size: 11px;
+      color: var(--blue-strong);
+      font-family: var(--font-mono);
+      letter-spacing: 0.08em;
+    }
 
-/* SECTIONS */
-.section {
-  margin-top: 30px;
-}
+    header h1 {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
 
-.section h2 {
-  margin-bottom: 15px;
-  color:  #ffffff;
-}
+    header p {
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
 
-/* CARDS */
-.card {
-  background: #0f172a;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #1e293b;
-  transition: 0.2s;
-}
+    .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #3b82f6;
-}
+    .btn-blue {
+      padding: 7px 18px;
+      border-radius: 6px;
+      background: var(--blue-strong);
+      color: var(--text-primary);
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      font-family: var(--font-body);
+      transition: opacity 0.2s;
+    }
+    .btn-blue:hover { opacity: 0.85; }
 
-.card h3 {
-  margin-top: 0;
-  color:  #ffffff;
-}
+    .btn-ghost {
+      padding: 7px 18px;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--blue-light);
+      font-size: 12px;
+      border: 1px solid var(--border-blue);
+      text-decoration: none;
+      font-family: var(--font-body);
+      transition: background 0.2s;
+    }
+    .btn-ghost:hover { background: var(--bg-deep); }
 
-.card p {
-  color: #94a3b8;
-}
+    /* DIVIDER */
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
 
-.card a {
-  text-decoration: none;
-  color: #3b82f6;
-  font-weight: bold;
-}
+    /* EYEBROW */
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--blue-strong);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--blue-strong);
+    }
 
-/* SKILLS */
-.skills span {
-  display: inline-block;
-  background: #1e293b;
-  color: #FFFFFF;
-  padding: 6px 12px;
-  margin: 5px;
-  border-radius: 6px;
-  font-weight: 500;
-}
+    /* HERO */
+    .hero {
+      padding: 3rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-</style>
+    .hero h2 {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+    }
+
+    .hero h2 em {
+      color: var(--blue-mid);
+      font-style: normal;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .stack-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .stack-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .stack-icon {
+      color: var(--blue-mid);
+      font-size: 18px;
+    }
+
+    .stack-card h3 {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--blue-light);
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+
+    .tag {
+      padding: 4px 11px;
+      border-radius: 5px;
+      background: var(--bg-deep);
+      color: var(--blue-light);
+      font-size: 11px;
+      border: 1px solid var(--border-blue);
+      font-family: var(--font-mono);
+    }
+
+    /* SECTION */
+    .section {
+      padding: 2.5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section > h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    /* PROJECTS GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .proj-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.2s;
+    }
+    .proj-card:hover { border-color: var(--blue-strong); }
+
+    .proj-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: var(--bg-deep);
+      border: 1px solid var(--border-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .proj-card h3 {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--blue-pale);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .proj-card p {
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+
+    .proj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+
+    .proj-tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--bg-deep);
+      color: var(--blue-mid);
+      font-size: 10px;
+      border: 1px solid var(--border-blue);
+      font-family: var(--font-mono);
+    }
+
+    .proj-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px;
+      border-radius: 6px;
+      background: var(--bg-deep);
+      color: var(--blue-light);
+      font-size: 11px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid var(--border-blue);
+      transition: background 0.2s, border-color 0.2s;
+      font-family: var(--font-body);
+    }
+    .proj-btn:hover { background: var(--blue-strong); border-color: var(--blue-strong); color: #fff; }
+
+    /* GOAL */
+    .goal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    .goal-card h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .goal-card p {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      color: var(--text-dim);
+      font-size: 11px;
+      font-family: var(--font-mono);
+    }
+
+    .footer-links { display: flex; gap: 16px; }
+
+    .footer-links a {
+      color: var(--blue-mid);
+      font-size: 11px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--blue-pale); }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .hero { grid-template-columns: 1fr; padding: 2rem 1.25rem; }
+      .section { padding: 2rem 1.25rem; }
+      header { padding: 1.25rem; }
+      .divider { margin: 0 1.25rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <header>
+    <div>
+      <div class="header-name-row">
+        <span class="nav-dot"></span>
+        <span class="header-slug">daniel.caldeirao</span>
+      </div>
+      <h1>Daniel Caldeirão</h1>
+      <p>Analista de Dados Jr. &nbsp;·&nbsp; SQL &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Analytics</p>
+    </div>
+    <div class="btn-row">
+      <a href="https://www.linkedin.com/in/daniel-caldeirao" target="_blank" class="btn-blue">LinkedIn</a>
+      <a href="https://github.com/DanielCauldron" target="_blank" class="btn-ghost">GitHub</a>
+    </div>
+  </header>
 
-<!-- HEADER -->
-<div class="header">
-  <img src="img/Daniel Image.jpeg" alt="Daniel">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Portfolio Profissional</div>
+      <h2>Transformando dados em <em>análises estratégicas</em> com foco em SQL, BI e Analytics.</h2>
+      <p class="hero-desc">Profissional focado em análise de dados, SQL, PostgreSQL e Power BI, desenvolvendo projetos voltados para KPIs, modelagem analítica, qualidade de dados e análise estratégica de negócios.</p>
+    </div>
+    <div class="stack-card">
+      <div class="stack-card-header">
+        <span class="stack-icon">⚙</span>
+        <h3>Stack Principal</h3>
+      </div>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">ETL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Modelagem de Dados</span>
+        <span class="tag">Automação</span>
+        <span class="tag">Git/GitHub</span>
+      </div>
+    </div>
+  </section>
 
-  <div class="header-info">
-    <h1>Daniel Caldeirão</h1>
-    <p>Analista de Dados Júnior | Power BI</p>
-    <p>Transformando dados em insights para tomada de decisão</p>
+  <div class="divider"></div>
 
-    <div class="links">
-      <a href="https://www.linkedin.com/in/daniel-cauldron/" target="_blank">LinkedIn</a>
+  <section class="section">
+    <div class="eyebrow">Projetos</div>
+    <h2>Projetos focados em análise de dados e automação</h2>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <div>
+          <div class="proj-icon">📊</div>
+          <h3>Global Sales Performance Analysis</h3>
+          <p>Painel executivo focado em análise global de vendas, desempenho comercial, lucratividade e KPIs estratégicos utilizando Power BI.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Power BI</span>
+            <span class="proj-tag">SQL</span>
+            <span class="proj-tag">Analytics</span>
+            <span class="proj-tag">KPIs</span>
+          </div>
+        </div>
+        <a href="https://github.com/DanielCauldron/global-sales-performance-analysis" target="_blank" class="proj-btn">↗ Ver Projeto</a>
+      </div>
+
+      <div class="proj-card">
+        <div>
+          <div class="proj-icon">🗄</div>
+          <h3>SQL Sales Analysis</h3>
+          <p>Projeto de análise comercial utilizando PostgreSQL com JOINs, CTEs, Window Functions e métricas analíticas para tomada de decisão.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">SQL</span>
+            <span class="proj-tag">PostgreSQL</span>
+            <span class="proj-tag">CTE</span>
+            <span class="proj-tag">Window Functions</span>
+          </div>
+        </div>
+        <a href="https://github.com/DanielCauldron/sql-sales-analysis" target="_blank" class="proj-btn">↗ Ver Projeto</a>
+      </div>
+
+      <div class="proj-card">
+        <div>
+          <div class="proj-icon">📈</div>
+          <h3>Power BI Folha de Pagamento</h3>
+          <p>Dashboard analítico desenvolvido com modelagem Star Schema, medidas DAX e indicadores de folha de pagamento.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Power BI</span>
+            <span class="proj-tag">DAX</span>
+            <span class="proj-tag">Star Schema</span>
+            <span class="proj-tag">BI</span>
+          </div>
+        </div>
+        <a href="https://github.com/DanielCauldron/powerbi-folha-pagamento" target="_blank" class="proj-btn">↗ Ver Projeto</a>
+      </div>
+
+      <div class="proj-card">
+        <div>
+          <div class="proj-icon">👥</div>
+          <h3>Análise Turnover RH</h3>
+          <p>Projeto de analytics voltado para análise de turnover, padrões de desligamento e indicadores estratégicos de RH.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Power BI</span>
+            <span class="proj-tag">Analytics</span>
+            <span class="proj-tag">RH</span>
+            <span class="proj-tag">KPIs</span>
+          </div>
+        </div>
+        <a href="https://github.com/DanielCauldron/analise-turnover-rh" target="_blank" class="proj-btn">↗ Ver Projeto</a>
+      </div>
+
+      <div class="proj-card">
+        <div>
+          <div class="proj-icon">🔍</div>
+          <h3>Data Quality Analysis — NULL Values</h3>
+          <p>Análise de qualidade de dados com foco em identificação, interpretação e impacto de valores NULL em cenários analíticos.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Data Quality</span>
+            <span class="proj-tag">SQL</span>
+            <span class="proj-tag">Power BI</span>
+            <span class="proj-tag">Analytics</span>
+          </div>
+        </div>
+        <a href="https://github.com/DanielCauldron/Data-Quality-Analysis-Understanding-NULL-Values" target="_blank" class="proj-btn">↗ Ver Projeto</a>
+      </div>
+
+      <div class="proj-card">
+        <div>
+          <div class="proj-icon">☕</div>
+          <h3>Dashboard Cafeteria Power BI</h3>
+          <p>Dashboard desenvolvido para análise de vendas, comportamento de consumo e indicadores operacionais de cafeteria.</p>
+          <div class="proj-tags">
+            <span class="proj-tag">Power BI</span>
+            <span class="proj-tag">Business Analysis</span>
+            <span class="proj-tag">KPIs</span>
+          </div>
+        </div>
+        <a href="https://github.com/DanielCauldron/Dashboard-Cafeteria-Power-BI" target="_blank" class="proj-btn">↗ Ver Projeto</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="goal-card">
+      <div class="eyebrow" style="margin-bottom:12px">Objetivo Profissional</div>
+      <h2>Evolução contínua em dados e analytics</h2>
+      <p>Meu foco é desenvolver soluções analíticas utilizando SQL, PostgreSQL, ETL, modelagem de dados e Power BI, buscando sempre aplicar boas práticas de organização, automação e estruturação de dados voltadas para ambientes profissionais.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 · daniel.caldeirao · data analyst</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/daniel-caldeirao" target="_blank">LinkedIn</a>
       <a href="https://github.com/DanielCauldron" target="_blank">GitHub</a>
     </div>
-  </div>
-</div>
-
-<!-- SOBRE -->
-<div class="section">
-  <h2>Sobre mim</h2>
-  <div class="card">
-    <p>
-      Analista de Dados com experiência em Power BI, SQL e ETL.
-      Focado na criação de dashboards e análise de dados para geração de insights estratégicos.
-    </p>
-  </div>
-</div>
-
-<!-- PROJETOS -->
-<div class="section">
-  <h2>Projetos</h2>
-
-  <div class="card">
-    <h3>📊 Análise de Churn</h3>
-    <p>Tratamento de dados nulos, modelagem e geração de insights.</p>
-    <a href="https://github.com/DanielCauldron/Data-Quality-Analysis-Understanding-NULL-Values" target="_blank">
-      Ver projeto →
-    </a>
-  </div>
-
-  <div class="card">
-    <h3>📈 Dashboard de Vendas</h3>
-    <p>KPIs de faturamento e análise de performance comercial.</p>
-    <a href="https://github.com/DanielCauldron/Dashboard-Cafeteria-Power-BI-"> Ver projeto →</a>
-  </div>
-
-  <div class="card">
-    <h3>⚙️ ETL com Python</h3>
-    <p>Pipeline de dados com Python e SQL.</p>
-    <a href="https://github.com/DanielCauldron/ETL-VIACEP-POSTERGRES">Ver projeto →</a>
-  </div>
-
-</div>
-
-<!-- HABILIDADES -->
-<div class="section">
-  <h2>Habilidades</h2>
-  <div class="skills">
-    <span>Power BI</span>
-    <span>SQL</span>
-    <span>Python</span>
-    <span>DAX</span>
-    <span>ETL</span>
-    <span>Modelagem de Dados</span>
-  </div>
-</div>
-
-</div>
+  </footer>
 
 </body>
 </html>
